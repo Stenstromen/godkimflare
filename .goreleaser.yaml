@@ -1,0 +1,25 @@
+project_name: godkimflare
+builds:
+  - env: [CGO_ENABLED=0]
+    goos:
+      - linux
+      - darwin
+    goarch:
+      - amd64
+      - arm64
+    binary: godkimflare
+archives:
+  - replacements:
+      darwin: Darwin
+      linux: Linux
+      amd64: x86_64
+brews:
+  - name: godkimflare
+    tap:
+      owner: stenstromen
+      name: homebrew-tap
+    commit_author:
+      name: stenstromen
+    folder: Formula
+    homepage: https://github.com/Stenstromen/godkimflare
+    description: Go binary for creating/updating DKIM records on Cloudflare.
