@@ -26,11 +26,11 @@ go build
 
 ## Example Usage
 ```
-- Create MTA-STS DNS Records and Nginx Configuration
+- Create DKIM DNS Record
 export TOKEN="# Cloudflare API TOKEN"
 ./godkimflare create -d example.com -f /path/to/privateKeyFile
 
-- Update MTA-STS DNS Records and/or Nginx Configuration
+- Update DKIM DNS Record
 export TOKEN="# Cloudflare API TOKEN"
 ./godkimflare update -d example.com -f /path/to/privateKeyFile
 
