@@ -34,6 +34,9 @@ export TOKEN="# Cloudflare API TOKEN"
 export TOKEN="# Cloudflare API TOKEN"
 ./godkimflare update -d example.com -f /path/to/privateKeyFile
 
+- Verify DKIM DNS Record (with keyfile)
+./godkimflare update -d example.com -f /path/to/privateKeyFile
+
 Go binary for creating/updating DKIM records on Cloudflare.
 
 Usage:
@@ -44,6 +47,7 @@ Available Commands:
   create      Create DKIM Record on Cloudflare
   help        Help about any command
   update      update DKIM Record on Cloudflare
+  verify      Verify DKIM Record on Cloudflare
 
 Flags:
   -h, --help   help for godkimflare
